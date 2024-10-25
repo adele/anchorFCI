@@ -1,4 +1,4 @@
-## AnchorFCI: an extension of the FCI algorithm designed to improve robustness and discovery power by strategically selecting and integrating reliable anchor variables into the graph, while leveraging known non-ancestral relationships.
+## AnchorFCI: an extension of the FCI algorithm designed to improve robustness and discovery power by strategically reliable anchors, while leveraging their known non-ancestral relationships.
   
 ### Overview
 
