@@ -1,0 +1,13 @@
+   Vi Vj Vk  ID   Unf
+1   4  1  7 271 FALSE
+2   4  1  8 272 FALSE
+3   5  1  7 335 FALSE
+4   5  1  8 336 FALSE
+5   7  1  8 464 FALSE
+6   5  3  6 350 FALSE
+7   1  4  2  98  TRUE
+8   2  4  5 165 FALSE
+9   1  5  3 107 FALSE
+10  3  5  4 236  TRUE
+11  3  6  8 248 FALSE
+12  1  8  6 134 FALSE

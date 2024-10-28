@@ -10,3 +10,7 @@ Encoding: UTF-8
 Imports: utils, rje, SEMgraph, dagitty, FCI.Utils, pcalg, BFF, jsonlite, dplyr, methods, lavaan, doFuture, future.apply
 LazyData: true
 RoxygenNote: 7.3.2
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
