@@ -1,0 +1,20 @@
+digraph graphname {node [shape = oval];
+A [label= A ]
+B [label= B ]
+C [label= C ]
+D [label= D ]
+E [label= E ]
+G1 [label= G1 ]
+G2 [label= G2 ]
+G3 [label= G3 ]
+A -> D [color=black, dir=both,arrowhead=normal, arrowtail=normal];
+A -> E [color=black, dir=both,arrowhead=normal, arrowtail=none];
+A -> G2 [color=black, dir=both,arrowhead=odot, arrowtail=normal];
+A -> G3 [color=black, dir=both,arrowhead=odot, arrowtail=normal];
+B -> D [color=black, dir=both,arrowhead=normal, arrowtail=odot];
+C -> E [color=black, dir=both,arrowhead=normal, arrowtail=odot];
+C -> G1 [color=black, dir=both,arrowhead=odot, arrowtail=odot];
+D -> E [color=black, dir=both,arrowhead=normal, arrowtail=normal];
+E -> G1 [color=black, dir=both,arrowhead=none, arrowtail=normal];
+G1 -> G3 [color=black, dir=both,arrowhead=odot, arrowtail=odot];
+}

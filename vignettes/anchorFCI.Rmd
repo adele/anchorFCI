@@ -1,6 +1,6 @@
 ---
-title: "anchorFCI"
-output: rmarkdown::html_vignette
+title: "AnchorFCI: Enhancing Causal Discovery with Reliable Anchors"
+output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{anchorFCI}
   %\VignetteEngine{knitr::rmarkdown}
@@ -22,7 +22,7 @@ library(FCI.Utils)
 ```
 
 
-```{r}
+```{r, results=FALSE}
 
 ############################################################
 # Generating a random MAG with n_vars + n_prec_vars nodes, #
@@ -52,14 +52,24 @@ for (prec_v in 1:n_prec_vars) {
 colnames(true.amat.mag) <- row.names(true.amat.mag) <-
   c(colnames(true.amat.mag)[1:n_vars], paste0("G", 1:n_prec_vars))
 
-#renderAG(true.amat.mag, add_index = FALSE)
-
-true.amat.pag <- getTruePAG(pcalg::pcalg2dagitty(
-  true.amat.mag, colnames(true.amat.mag), type="mag"))@amat
-#renderAG(true.amat.pag, add_index = FALSE)
+renderAG(true.amat.mag, add_index = FALSE, fileid="trueMAG")
 ```
 
-```{r, warn.conflicts=F, quietly=T}
+![True MAG.](./tmp/trueMAG.png){#id .class width=50% height=50%}
+
+```{r, results=FALSE}
+true.amat.pag <- getTruePAG(pcalg::pcalg2dagitty(
+  true.amat.mag, colnames(true.amat.mag), type="mag"))@amat
+
+renderAG(true.amat.pag, add_index = FALSE, fileid="truePAG")
+
+```
+
+![True PAG.](./tmp/truePAG.png){#id .class width=50% height=50%}
+
+
+```{r, warn.conflicts=FALSE, quietly=TRUE, message=FALSE}
+
 ######################################################
 # Generating a random dataset following the true PAG #
 ######################################################
@@ -85,7 +95,8 @@ dataset <- dat_out$dat
 
 ```
 
-```{r, echo = FALSE, results='hide'}
+
+```{r, results=FALSE, plot=TRUE, fig.height=5.5}
 ####################################
 # Causal Discovery using AnchorFCI #
 ####################################
@@ -115,12 +126,16 @@ out_anchorFCI <- anchorFCI(suffStat, indepTest,
                            renderAll = FALSE, width=800, height = 450,
                            output_folder=output_folder)
 
-out_anchorFCI$amb_triplets_df
+#out_anchorFCI$amb_triplets_df
 
-#renderAG(out_anchorFCI$fit_anchor_fci@amat, add_index = FALSE)
+renderAG(out_anchorFCI$fit_anchor_fci@amat, add_index = FALSE, fileid="anchorFCI_outputPAG")
+
 ```
 
-```{r, echo = FALSE, results='hide'}
+![AnchorFCI's PAG.](./tmp/anchorFCI_outputPAG.png){#id .class width=50% height=50%}
+
+
+```{r, results=FALSE}
 
 #########################################
 # For the sake of comparison with RFCI: #
@@ -134,11 +149,16 @@ fit_rfci <- pcalg::rfci(suffStat, indepTest = indepTest,
                         verbose = TRUE, conservative = FALSE,
                         maj.rule = TRUE)
 
+renderAG(fit_rfci@amat, add_index = FALSE, fileid="RFCI_outputPAG") # RFCI's PAG
+
 ```
+
+![RFCI's PAG.](./tmp/RFCI_outputPAG.png){#id .class width=50% height=50%}
+
 
 ```{r}
 
-# Uncomment the following lines to render the PAGs
+# Uncomment the following lines to render all PAGs
 # renderAG(true.amat.mag, add_index = FALSE) # True PAG
 # renderAG(true.amat.pag, add_index = FALSE) # True PAG
 # renderAG(fit_rfci@amat, add_index = FALSE) # RFCI's PAG
