@@ -4,7 +4,7 @@
 
 This package provides an implementation of the anchorFCI by Ribeiro et al. (2024), available at <https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2024.1436947/full>, doi: 10.3389/fgene.2024.1436947
 
-AnchorFCI is an extension of the FCI algorithm designed to improve robustness and discovery power by strategically selecting reliable anchors, while leveraging their known non-ancestral relationships.
+AnchorFCI is an extension of the FCI algorithm designed to improve robustness and discovery power in causal discovery by strategically selecting reliable anchors, while leveraging their known non-ancestral relationships.
 
 It operates on two sets of variables: the first set contains the variables of interest, while the second comprises variables that are not caused by any from the first. 
 
