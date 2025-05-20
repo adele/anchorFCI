@@ -1,6 +1,4 @@
 ## AnchorFCI: Enhancing Causal Discovery with Reliable Anchors
-  
-### Overview
 
 This package provides an implementation of the anchorFCI by Ribeiro et al. (2024), available at <https://www.frontiersin.org/journals/genetics/articles/10.3389/fgene.2024.1436947/full>, doi: 10.3389/fgene.2024.1436947
 
