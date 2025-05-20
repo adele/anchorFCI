@@ -15,7 +15,21 @@ First, install R (>= 3.5.0) and the following packages:
 ```r
 install.packages(c("FCI.Utils", "pcalg", "igraph", "RBGL", "graph", "doFuture", "gtools", "MXM", "pscl", "DOT", "rsvg"), dependencies=TRUE)
 ```
-You can download the latest tar.gz file with the source code of the IOD R package, available at <https://github.com/adele/anchorFCI/releases/latest>, and install it with the following command, where `path_to_file` represents the full path and file name of the tar.gz file:
+
+Then, install the FCI.Utils R package, available at <https://github.com/adele/FCI.Utils>/
+
+You can install the development version directly from GitHub:
+
+``` r
+install.packages("devtools", dependencies=TRUE)
+devtools::install_github("adele/FCI.Utils", dependencies=TRUE)
+```
+
+
+Now, you can download the latest tar.gz file with the source code of the anchorFCI R package.
+
+The lastest version is available at <https://github.com/adele/anchorFCI/releases/latest>. 
+You can install it with the following command, where `path_to_file` represents the full path and file name of the tar.gz file:
 
 ``` r
 install.packages(path_to_file, repos=NULL, type="source", dependencies=TRUE)
