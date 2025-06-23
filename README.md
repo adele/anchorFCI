@@ -9,6 +9,26 @@ It operates on two sets of variables: the first set contains the variables of in
 While this structure is beneficial for various applications, it is especially well-suited for datasets involving phenotypic, clinical, and sociodemographic variables (the first set), alongside genetic variables, such as SNPs (the second set), which are recognized as not being caused by the first set.
 
 
+### Citation
+
+If you use this work, please cite:
+
+Ribeiro, A. H., Crnkovic, M., Pereira, J. L., Fisberg, R. M., Sarti, 
+F. M., Rogero, M. M., Heider, D., & Cerqueira, A. (2024). 
+AnchorFCI: Harnessing genetic anchors for enhanced causal discovery of 
+cardiometabolic disease pathways. Frontiers in Genetics, 15, 1436947. 
+https://doi.org/10.3389/fgene.2024.1436947
+
+
+```
+@article{ribeiro2024anchorfci,
+title={AnchorFCI: Harnessing genetic anchors for enhanced causal discovery of cardiometabolic disease pathways}, 
+author={Ribeiro, Adèle H. and Crnkovic, Milena and Pereira, Jaqueline L. and Fisberg, 
+Regina M. and Sarti, Flavia M. and Rogero, Marcelo M. and Heider, Dominik and Cerqueira, Andressa}, 
+journal={Frontiers in Genetics}, 
+volume={15}, pages={1436947}, year={2024}, doi={10.3389/fgene.2024.1436947} }
+```
+
 ### Installation
 
 First, install R (>= 3.5.0) and the following packages:
