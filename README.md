@@ -33,7 +33,7 @@ volume={15}, pages={1436947}, year={2024}, doi={10.3389/fgene.2024.1436947} }
 
 First, install R (>= 3.5.0) and the following packages:
 ```r
-install.packages(c("FCI.Utils", "pcalg", "igraph", "RBGL", "graph", "doFuture", "gtools", "MXM", "pscl", "DOT", "rsvg"), dependencies=TRUE)
+install.packages(c("pcalg", "igraph", "RBGL", "graph", "doFuture", "gtools", "MXM", "pscl", "DOT", "rsvg"), dependencies=TRUE)
 ```
 
 Then, install the FCI.Utils R package, available at <https://github.com/adele/FCI.Utils>/
